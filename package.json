@@ -5,7 +5,10 @@
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
-        "test": "nodemon index.js"
+        "test": "nodemon index.js",
+        "node-update": "npm i --save-dev node@16 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH",
+        "node-clean": "rm -rf node_modules && rm package-lock.json && npm cache clear --force && npm cache clean --force && npm i",
+        "node-update-then-clean": "npm run node-update && npm run node-clean"
     },
     "keywords": [],
     "author": "",
@@ -13,6 +16,13 @@
     "dependencies": {
         "discord.js": "^13.2.0",
         "glob": "^7.1.7",
-        "mongoose": "^6.0.2"
+        "moment": "^2.29.1",
+        "mongoose": "^6.0.2",
+        "ms": "^2.1.3",
+        "node-fetch": "^2.6.1",
+        "os": "^0.1.2"
+    },
+    "devDependencies": {
+        "node": "^16.13.1"
     }
 }

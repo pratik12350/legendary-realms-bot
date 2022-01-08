@@ -1,5 +1,9 @@
 {
-
-    "prefix": "!",
-    "mongooseConnectionString": ""
+    "prefix": "!!",
+    "mongooseConnectionString": "",
+     "ipAddress": "legendaryclan.my.pebble.host",
+    
+    "playersChannel": "929052082177179668",
+    "statusChannel": "929052212108333156",
+    "updateInterval": "10min"
 }

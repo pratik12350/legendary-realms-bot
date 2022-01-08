@@ -1,13 +1,19 @@
-const client = require("../index");
-const ms = require('ms')
-const fetch = require('node-fetch')
-client.on("ready", () => {
-    console.log(`${client.user.tag} is up and ready to go!`)
+const { MessageEmbed } = require('discord.js');
+const ms = require('ms');
+const fetch = require('node-fetch');
 
+module.exports = {
+  name: 'force-stats-update',
+  description: 'forcefully update server stats',
+  usages: '!!force-stats-update',
+  aliases: ["force-update"],
+  run: async(client, message, args) => {
+
+if(!message.member.permissions.has("MANAGE_GUILD")) return message.reply("You're Missing Permissions! MANAGE SERVER is required!")  
+    
 /*
- * Function to change status
- */
-
+* Update Function
+*/
 const updateChannel = async () => {
 
     // Fetch statistics from mcapi.us
@@ -37,8 +43,21 @@ const updateChannel = async () => {
     return true
 }
 
-setInterval(() => {
-        updateChannel()
-    }, ms(client.config.updateInterval))
-  
-});
+ const updatingStatsEmbed = new MessageEmbed()
+    .setTitle('Updating...')
+    .setDescription('Updating Stats Pleass Wait.')
+    .setColor("2F3136")
+
+const msg = await message.channel.send({ embeds: [updatingStatsEmbed] })
+    
+  await updateChannel();
+    
+  const doneEmbed = new MessageEmbed()
+    .setTitle("Done!")
+    .setDescription("Successfully Updated Channels! if it doesn't update then please report to my developer `Pratik.JS#1746`")
+    .setColor("2F3136")
+    .setThumbnail(message.guild.iconURL())
+
+    msg.edit({ embeds: [doneEmbed] })
+}
+}
