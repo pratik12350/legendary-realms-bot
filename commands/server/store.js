@@ -58,18 +58,20 @@ module.exports = {
           let gKitsEmbed = new MessageEmbed()
             .setTitle("G-KITS")
             .setDescription("command underdevelopment")
-            .addField("Items In This Category:", ">>> • [Wizard's Cloak](https://legendaryclan.tebex.io/package/4914023) - \n  • Price: 12.00 USD\n  •Info: `!!gkit info wizard-cloak`\n• [The Enchanter](https://legendaryclan.tebex.io/package/4914054) - \n  • Price: 3.50 USD\n  •Info: `!!gkit info the-enchanter`\n• [Armor Of Justice](https://legendaryclan.tebex.io/package/4914056) - \n  • Price: 10.00 USD\n  •Info: `!!gkit info armor-of-justice`\n• [King Of Darkness](https://legendaryclan.tebex.io/package/4914077) - \n  • Price: 9.00 USD\n  •Info: `!!gkit info king-darkness`\n• [Holy Chalice](https://legendaryclan.tebex.io/package/4914079) - \n  • Price: 10.00 USD\n  •Info: `!!gkit info holy-chalice`\n• [Wizard's Tool](https://legendaryclan.tebex.io/package/4914082) - \n  • Price: 7.50 USD\n  •Info: `!!gkit info wizard-`)
-            ak Of Death](https://legendaryclan.tebex.io/package/4914088) - \n  • Price: 12.50 USD\n  •Info: `!!gkit info cloa\k• [Bow Of Light](https://legendaryclan.tebex.io/package/4914092) - \n  • Price: 7.50 USD\n  •Info: `!!gkit info cloak``        .setColor("2F3136")
-            .setFooter("Underdevlopment cmd!")
-            
-                    .setImage("https://media.discordapp.net/attachments/936177250582269972/938015815498879016/Screenshot_20220201_154925.JPG") message.reply({
+            .addField("Items In This Category:", ">>> • [Wizard's Cloak](https://legendaryclan.tebex.io/package/4914023) - \n  • Price: 12.00 USD\n  •Info: `!!gkit info wizard-cloak`\n• [The Enchanter](https://legendaryclan.tebex.io/package/4914054) - \n  • Price: 3.50 USD\n  •Info: `!!gkit info the-enchanter`\n• [Armor Of Justice](https://legendaryclan.tebex.io/package/4914056) - \n  • Price: 10.00 USD\n  •Info: `!!gkit info armor-of-justice`\n• [King Of Darkness](https://legendaryclan.tebex.io/package/4914077) - \n  • Price: 9.00 USD\n  •Info: `!!gkit info king-darkness`\n• [Holy Chalice](https://legendaryclan.tebex.io/package/4914079) - \n  • Price: 10.00 USD\n  •Info: `!!gkit info holy-chalice`\n• [Wizard's Tool](https://legendaryclan.tebex.io/package/4914082) - \n  • Price: 7.50 USD\n  •Info: `!!gkit info wizard-tool`\n• [Dark Of Death](https://legendaryclan.tebex.io/package/4914088) - \n  • Price: 12.50 USD\n  •Info: `!!gkit info cod`\n• [Bow Of Light](https://legendaryclan.tebex.io/package/4914092) - \n  • Price: 7.50 USD\n  •Info: `!!gkit info bol`")
+          .setColor("2F3136"    )
+            .setFooter("Underdevlopment cmd!" )           
+                    .setImage("https://media.discordapp.net/attachments/936177250582269972/938015815498879016/Screenshot_20220201_154925.JPG")
+                    
+message.reply({
             embeds: [gKitsEmbed]
           })
-        
+          
+          }
       }
 
 
     }
 
-  }
+        }
 }
