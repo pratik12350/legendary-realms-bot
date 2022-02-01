@@ -16,7 +16,7 @@ module.exports = {
         .setDescription("Prefix: `!!`\nUse `!!help <command>` for more info about a command")
         .setColor("2F3136")
         .addField("INFO [2]", "`ping`, `help`")
-        .addField("SERVER [2]", "`force-stats-update`, `server-stats`")
+        .addField("SERVER [2]", "`force-stats-update`, `server-stats`, `ip`, `store`")
         .addField("MODERATION [3]", "`kick`, `ban`, `unban`")
         .setFooter("Made By Pratik")
         .setThumbnail(message.guild.iconURL())

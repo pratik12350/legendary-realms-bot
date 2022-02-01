@@ -1,3 +1,11 @@
+const app = require('express')()
+
+app.listen(3000, () => {
+  console.log("webserver ready!")
+})
+
+app.get("/", (req, res) => {
+res.send("sus")})
 const { Client, Collection } = require("discord.js");
 
 const client = new Client({
